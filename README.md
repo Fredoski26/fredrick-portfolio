@@ -1,6 +1,6 @@
 # 🚀 Ultra-Modern Animated Portfolio Website
 
-A cutting-edge, fully responsive portfolio website built with React and enhanced with sophisticated animations, glassmorphism design, and interactive elements. This portfolio showcases modern web development techniques with stunning visual effects that create an immersive user experience.
+ This portfolio showcases modern web development techniques with stunning visual effects that create an immersive user experience.
 
 ## ✨ Features
 
@@ -131,74 +131,7 @@ yarn build
 
 The build folder will contain optimized production files ready for deployment.
 
-## 🎨 Customization Guide
 
-### **Personal Information**
-Update the following in the main component:
-
-```javascript
-// Hero Section
-const name = "Your Name";
-const title = "Full Stack Developer & Creative Technologist";
-const description = "Your professional description...";
-
-// Contact Information
-const contactInfo = {
-  email: "your.email@example.com",
-  phone: "+234 123 456 7890",
-  location: "Your Location"
-};
-```
-
-### **Experience Data**
-Modify the `experiences` array:
-
-```javascript
-const experiences = [
-  {
-    title: "Your Job Title",
-    company: "Company Name",
-    period: "Start - End Date",
-    description: "Role description...",
-    icon: Award, // Choose from available icons
-    color: "from-blue-500 to-purple-500", // Gradient colors
-    achievements: ["Achievement 1", "Achievement 2", "Achievement 3"]
-  }
-];
-```
-
-### **Skills Configuration**
-Update the `skills` object:
-
-```javascript
-const skills = {
-  "Category Name": {
-    skills: ["Skill 1", "Skill 2", "Skill 3"],
-    icon: Code, // Icon component
-    color: "from-blue-500 to-purple-500", // Gradient
-    proficiency: [95, 90, 85] // Percentage values
-  }
-};
-```
-
-### **Projects Data**
-Customize the `projects` array:
-
-```javascript
-const projects = [
-  {
-    title: "Project Name",
-    description: "Project description...",
-    technologies: ["Tech 1", "Tech 2", "Tech 3"],
-    github: "GitHub URL",
-    live: "Live demo URL",
-    category: "Project Category",
-    status: "Live/In Development",
-    features: ["Feature 1", "Feature 2", "Feature 3"],
-    gradient: "from-blue-600 to-purple-600"
-  }
-];
-```
 
 ### **Color Schemes**
 The portfolio uses Tailwind CSS classes. Main color variables:

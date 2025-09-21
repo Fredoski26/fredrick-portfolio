@@ -1,6 +1,9 @@
 "use client";
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Menu, X, Code, Briefcase, User, MessageSquare, ChevronDown, Star, Award, Zap } from 'lucide-react';
+import fred from './images/fred.jpeg';
+
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,8 +85,9 @@ const Portfolio = () => {
   ];
 
   const skills = {
+    "Mobile": ["Flutter", "Dart","ReactNative", "Kotlin", "JetpackCompose", "Android Native","Swift"],
     "Frontend": ["React", "Next.js", "Vue.js", "TypeScript", "Tailwind CSS", "SASS"],
-    "Backend": ["Node.js", "Python", "Express.js", "Django", "PostgreSQL", "MongoDB"],
+    "Backend": ["Node.js", "Express.js", "Django", "PostgreSQL", "MongoDB"],
     "Tools & Others": ["Git", "Docker", "AWS", "Jest", "Webpack", "GraphQL"]
   };
 
@@ -300,21 +304,22 @@ const Portfolio = () => {
               <div className={`w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center transition-all duration-1000 hover:scale-110 hover:rotate-12 ${
                 isLoaded ? 'scale-100 rotate-0' : 'scale-0 rotate-180'
               }`} style={{ transitionDelay: '200ms' }}>
-                <User size={60} className="text-white animate-pulse" />
+                <Image src={fred} alt={"Fred"} className=" w-full h-40 object-cover rounded-full  text-white animate-pulse" />
+                {/* <User size={60} className="text-white animate-pulse" /> */}
               </div>
               
               <h1 className={`text-5xl md:text-7xl font-bold text-gray-900 mb-6 transition-all duration-1000 ${
                 isLoaded ? 'scale-100 opacity-100' : 'scale-50 opacity-0'
               }`} style={{ transitionDelay: '400ms' }}>
-                <span className="inline-block hover:animate-bounce cursor-default">Your</span>{' '}
-                <span className="inline-block hover:animate-bounce cursor-default" style={{ animationDelay: '0.1s' }}>Name</span>
+                <span className="inline-block hover:animate-bounce cursor-default">Fredrick</span>{' '}
+                <span className="inline-block hover:animate-bounce cursor-default" style={{ animationDelay: '0.1s' }}>Obarafor</span>
               </h1>
               
               <p className={`text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto transition-all duration-1000 ${
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`} style={{ transitionDelay: '600ms' }}>
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
-                  Full Stack Developer & UI/UX Enthusiast
+                  Software Developer & UI/UX Enthusiast
                 </span>
               </p>
               
@@ -363,18 +368,26 @@ const Portfolio = () => {
             <div className="group">
               <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl flex items-center justify-center transform hover:scale-105 hover:rotate-2 transition-all duration-500 group-hover:shadow-2xl relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-400/20 transform translate-x-full group-hover:translate-x-0 transition-transform duration-700"></div>
-                <User size={120} className="text-gray-400 transform group-hover:scale-110 transition-transform duration-300 relative z-10" />
+                {/* <User size={120} className="text-gray-400 transform group-hover:scale-110 transition-transform duration-300 relative z-10" /> */}
+                <Image src={fred} alt={"Fred"} className=" w-full h-full object-cover text-gray-400 transform group-hover:scale-110 transition-transform duration-300 relative z-10" />
               </div>
             </div>
             
             <div className="space-y-6">
               <div className="transform hover:translate-x-2 transition-transform duration-300">
                 <p className="text-lg text-gray-600 leading-relaxed hover:text-gray-800 transition-colors duration-300">
-                  I'm a passionate Full Stack Developer with over{' '}
+                  I’m a tech focused software developer for up to {' '}
                   <span className="font-bold text-blue-600">
                     <AnimatedCounter end={5} />+
                   </span>{' '}
                   years of experience creating digital solutions that make a difference. I love turning complex problems into simple, beautiful designs that users enjoy interacting with.
+                  
+                </p>
+              </div>
+
+              <div className="transform hover:translate-x-2 transition-transform duration-300" style={{ transitionDelay: '100ms' }}>
+                <p className="text-lg text-gray-600 leading-relaxed hover:text-gray-800 transition-colors duration-300">
+                 I graduated from Middlesex University, where I made the Dean’s List, with a major in Information Technology and as software engineer at National Institute of information technology
                 </p>
               </div>
               
@@ -650,9 +663,9 @@ const Portfolio = () => {
 
               <div className="space-y-6">
                 {[
-                  { icon: Mail, label: "Email", value: "your.email@example.com", color: "blue" },
-                  { icon: Phone, label: "Phone", value: "+234 123 456 7890", color: "green" },
-                  { icon: MapPin, label: "Location", value: "Lagos, Nigeria", color: "purple" }
+                  { icon: Mail, label: "Email", value: "fredoski26@hotmail.com", color: "blue" },
+                  { icon: Phone, label: "Phone", value: "+2348069456870", color: "blue" },
+                  { icon: MapPin, label: "Location", value: "Lagos, Nigeria", color: "blue" }
                 ].map((item, index) => (
                   <div 
                     key={index}
@@ -676,8 +689,8 @@ const Portfolio = () => {
 
               <div className="flex space-x-4 mt-8" style={{ animation: 'slideInLeft 1.2s ease-out' }}>
                 {[
-                  { href: "https://github.com/yourusername", icon: Github, bg: "gray-900", hover: "gray-800" },
-                  { href: "https://linkedin.com/in/yourprofile", icon: Linkedin, bg: "blue-600", hover: "blue-700" }
+                  { href: "https://github.com/Fredoski26", icon: Github, bg: "gray-900", hover: "gray-800" },
+                  { href: "https://www.linkedin.com/in/fredrick-obarafor-708a81155/", icon: Linkedin, bg: "blue-600", hover: "blue-700" }
                 ].map((social, index) => (
                   <a
                     key={index}
@@ -752,10 +765,10 @@ const Portfolio = () => {
           {/* Stats Section */}
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8" style={{ animation: 'fadeInUp 1s ease-out 800ms both' }}>
             {[
-              { number: 50, suffix: "+", label: "Projects Completed" },
+              { number: 45, suffix: "+", label: "Projects Completed" },
               { number: 5, suffix: "+", label: "Years Experience" },
               { number: 100, suffix: "%", label: "Client Satisfaction" },
-              { number: 15, suffix: "+", label: "Technologies Mastered" }
+              { number: 12, suffix: "+", label: "Technologies Mastered" }
             ].map((stat, index) => (
               <div 
                 key={index}
@@ -846,7 +859,7 @@ const Portfolio = () => {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <p className="text-gray-400 hover:text-white transition-colors duration-300 transform hover:scale-105">
-            © 2024 Your Name. All rights reserved.
+            © 2024 Fredrick Obarafor. All rights reserved.
           </p>
           <div className="mt-4 flex justify-center space-x-4">
             <div className="w-8 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse"></div>
